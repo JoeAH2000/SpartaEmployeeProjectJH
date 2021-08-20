@@ -9,9 +9,11 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<EmployeeDTO> employeesUnclean = CsvFileReader.readFromFile("src/main/resources/EmployeeRecordsLarge.csv");
+        String fileName = "src/main/resources/EmployeeRecordsLarge.csv";
+        int numOfThreads = 160;
+        ArrayList<EmployeeDTO> employeesUnclean = CsvFileReader.readFromFile(fileName);
 
-        ThreadRunner.threadRunner(160, CsvFileCleaner.csvFileCleaner(employeesUnclean));
+        ThreadRunner.threadRunner(numOfThreads, CsvFileCleaner.csvFileCleaner(employeesUnclean));
     }
 
 }
