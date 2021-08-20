@@ -1,4 +1,4 @@
-#Java Sort Manager
+#Java Employee Record Project
 
 ##Created By Joe Hilton
 
