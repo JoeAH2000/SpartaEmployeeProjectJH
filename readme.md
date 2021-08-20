@@ -30,7 +30,7 @@ Step 1) Open database.properties found in the resources folder, then set userNam
 
 Step 2) Ensure that the fileName variable on line 12 of Main is correctly set to appropriate .Csv file (Two are bundled by default, EmployeeRecordsLarge.csv is the default value)
 
-Step 3a) Set the numOfThreads variable on line 13 of Main to whatever number of threads you would like to use (160 was good for development system)
+Step 3) Set the numOfThreads variable on line 13 of Main to whatever number of threads you would like to use (160 was good for development system)
 
 Step 4) Ensure that the maximum number of connections to your MySQL server is at least equal to the numOfThreads variable, it should preferably be higher however.
 
