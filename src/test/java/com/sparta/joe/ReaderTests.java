@@ -1,13 +1,10 @@
 package com.sparta.joe;
 
-import com.sparta.joe.csvproject.cleaner.CsvFileCleaner;
 import com.sparta.joe.csvproject.dto.EmployeeDTO;
 import com.sparta.joe.csvproject.reader.CsvFileReader;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 
 public class ReaderTests {

@@ -39,7 +39,10 @@ public class EmployeeDAO {
         int numOfRows = 0;
         try {
             statement = connection.createStatement();
-            numOfRows = statement.executeUpdate("SELECT COUNT(*) FROM `employee_records`.`employees`;");
+            ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM `employee_records`.`employees`;");
+            while(resultSet.next()) {
+                numOfRows = resultSet.getInt(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

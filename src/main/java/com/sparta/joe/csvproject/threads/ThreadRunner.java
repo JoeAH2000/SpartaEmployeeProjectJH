@@ -22,6 +22,7 @@ public class ThreadRunner {
             dataHandlers.get(i).setEmployeeSegment(splitLists[i]);
             threadList.add(new Thread(dataHandlers.get(i)));
         }
+        System.out.println("Starting " + numOfThreads + " new threads");
 
         long startTime = System.nanoTime();
         for (Thread thread : threadList) {
@@ -38,7 +39,7 @@ public class ThreadRunner {
         long endTime = System.nanoTime();
 
         ConnectionManager.closeConnection();
-
+        System.out.println("Closed Connection");
         double totalExecutionTimeSeconds = (((endTime)-(startTime))/1000000000.0);
         NumberFormat format = new DecimalFormat("#0.000");
         System.out.println("Inserting " + employeesClean.size() + " records took " + format.format(totalExecutionTimeSeconds) + " seconds");
